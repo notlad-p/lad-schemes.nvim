@@ -1152,6 +1152,13 @@ M.get_highlights = function(scheme)
 		IlluminatedWordText = { bg = colors.one_bg2, underline = false },
 		IlluminatedWordRead = { bg = colors.one_bg2, underline = false },
 		IlluminatedWordWrite = { bg = colors.one_bg2, underline = false },
+
+    -- trouble.nvim
+    -- count next to file name
+		-- TroubleCount = { bg = colors.one_bg2, fg = colors.green },
+    -- whole of trouble window
+    -- TroubleNormal = { bg = colors.one_bg2, fg = colors.green },
+    TroublePreview = { bg = colors.one_bg2, fg = colors.yellow, underline = true }
 	}
 end
 
