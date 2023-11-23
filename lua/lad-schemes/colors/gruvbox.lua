@@ -52,6 +52,11 @@ M.theme = {
 	base0F = "#d65d0e",
 }
 
+M.polish_hl = {
+  Pmenu = { bg = M.colors.darker_black },
+  PmenuSel = { bg = M.colors.one_bg2 },
+}
+
 -- M.polish_hl = {
 --   ["@keyword.function"] = {
 --     fg = M.base_16.base0C,
