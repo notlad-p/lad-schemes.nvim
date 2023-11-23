@@ -5,6 +5,7 @@ M.get_highlights = function(scheme)
 	local color_scheme = require("lad-schemes.colors").get_scheme(scheme)
 	local colors = color_scheme.colors
 	local theme = color_scheme.theme
+  local polish_hl = color_scheme.polish_hl or nil
 
 	-- terminal colors
 	vim.g.terminal_color_0 = colors.black
@@ -24,7 +25,7 @@ M.get_highlights = function(scheme)
 	vim.g.terminal_color_14 = colors.cyan
 	vim.g.terminal_color_15 = colors.white
 
-	return {
+	local highlights = {
 
 		-- Defaults
 		Normal = { fg = theme.base05, bg = theme.base00 },
@@ -1172,5 +1173,13 @@ M.get_highlights = function(scheme)
     SniprunVirtualTextErr            = { bg = colors.red, fg = colors.black, },
     SniprunFloatingWinErr            = { fg = colors.red, },
   }
+
+  -- merge hightlights table and polish_hl table
+  if polish_hl then
+    for group, opts in pairs(polish_hl) do highlights[group] = opts end
+  end
+
+  return highlights
+end
 
 return M
