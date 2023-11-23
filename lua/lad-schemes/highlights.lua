@@ -64,7 +64,7 @@ M.get_highlights = function(scheme)
 		MatchWord = { bg = colors.grey, fg = colors.white },
 		Pmenu = { bg = colors.one_bg },
 		PmenuSbar = { bg = colors.one_bg },
-		PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
+		PmenuSel = { bg = colors.pmenu_bg },
 		PmenuThumb = { bg = colors.grey },
 		MatchParen = { link = "MatchWord" },
 		Comment = { fg = colors.grey_fg },
@@ -117,10 +117,14 @@ M.get_highlights = function(scheme)
 		AlphaButtons = { fg = colors.light_grey },
 
 		-- Indent Blankline
+    -- Old indent blankline hightlights
 		IndentBlanklineChar = { fg = colors.line },
 		IndentBlanklineSpaceChar = { fg = colors.line },
 		IndentBlanklineContextChar = { fg = colors.grey },
-		IndentBlanklineContextStart = { bg = colors.one_bg2 },
+		IndentBlanklineContextStart = { bg = colors.statusline_bg },
+    -- New indent blankline highlights
+    -- IblScope = { underline = false, fg = colors.grey_fg },
+    -- IblIndent = { fg = colors.line, bold = false },
 
 		-- Bufferline
 		BufferLineBackground = {
@@ -251,9 +255,6 @@ M.get_highlights = function(scheme)
 		-- Cmp
 		CmpItemAbbr = { fg = colors.white },
 		CmpItemAbbrMatch = { fg = colors.blue, bold = true },
-		CmpBorder = { fg = colors.grey },
-		CmpDocBorder = { fg = colors.darker_black, bg = colors.darker_black },
-		CmPmenu = { bg = colors.darker_black },
 
 		-- cmp item kinds
 		CmpItemKindConstant = { fg = theme.base09 },
@@ -1149,17 +1150,27 @@ M.get_highlights = function(scheme)
 		GitSignsDelete = { fg = colors.red },
 
 		-- vim-illuminate
-		IlluminatedWordText = { bg = colors.one_bg2, underline = false },
-		IlluminatedWordRead = { bg = colors.one_bg2, underline = false },
-		IlluminatedWordWrite = { bg = colors.one_bg2, underline = false },
+		IlluminatedWordText = { bg = colors.black2, underline = false },
+		IlluminatedWordRead = { bg = colors.black2, underline = false },
+		IlluminatedWordWrite = { bg = colors.black2, underline = false },
 
     -- trouble.nvim
     -- count next to file name
 		-- TroubleCount = { bg = colors.one_bg2, fg = colors.green },
     -- whole of trouble window
     -- TroubleNormal = { bg = colors.one_bg2, fg = colors.green },
-    TroublePreview = { bg = colors.one_bg2, fg = colors.yellow, underline = true }
-	}
-end
+    TroublePreview = { bg = colors.one_bg2, fg = colors.yellow, underline = true },
+
+    -- leap.nvim
+    LeapMatch = { fg = colors.black, bg = theme.base09, bold = true },
+    LeapLabelPrimary = { fg = colors.black, bg = theme.base0C, bold = true },
+    LeapLabelSecondary = { fg = colors.black, bg = theme.base0D, bold = true },
+
+    -- sniprun
+    SniprunVirtualTextOk             = { fg = theme.base0C, },
+    SniprunFloatingWinOk             = { fg = theme.base0C, },
+    SniprunVirtualTextErr            = { bg = colors.red, fg = colors.black, },
+    SniprunFloatingWinErr            = { fg = colors.red, },
+  }
 
 return M
