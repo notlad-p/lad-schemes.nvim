@@ -1,9 +1,8 @@
 To Do:
 
-- _DO_: Add feature to customize highlights per scheme
-- Add lualine themes
 - Add more colorschemes
 - Customize existing color schemes
+  - fix completion menu readability
 
 Inspiration:
 
