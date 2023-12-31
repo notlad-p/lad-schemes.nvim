@@ -5,6 +5,7 @@ M.colorscheme = function(scheme)
 	vim.cmd("set t_Co=256")
 	vim.o.termguicolors = true
 	vim.g.colors_name = "lad-schemes"
+  vim.g.lad_schemes_theme = scheme
 
 	-- set highlights
 	local highlights = require("lad-schemes.highlights").get_highlights(scheme)
