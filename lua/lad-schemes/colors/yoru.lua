@@ -52,4 +52,10 @@ M.theme = {
 	base0F = "#e8646a",
 }
 
+M.polish_hl = {
+	Pmenu = { bg = M.colors.darker_black },
+	PmenuSel = { bg = M.colors.one_bg2 },
+	-- GitSignsAdd = { fg = M.colors.pink },
+}
+
 return M

@@ -52,4 +52,8 @@ M.theme = {
 	base0F = "#F16269",
 }
 
+M.polish_hl = {
+	PmenuSel = { bg = M.colors.pmenu_bg, fg = M.theme.base00 },
+}
+
 return M

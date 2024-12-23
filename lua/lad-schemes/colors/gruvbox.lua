@@ -53,8 +53,9 @@ M.theme = {
 }
 
 M.polish_hl = {
-  Pmenu = { bg = M.colors.darker_black },
-  PmenuSel = { bg = M.colors.one_bg2 },
+	Pmenu = { bg = M.colors.darker_black },
+	PmenuSel = { bg = M.colors.one_bg2 },
+	-- GitSignsAdd = { fg = M.colors.pink },
 }
 
 -- M.polish_hl = {
