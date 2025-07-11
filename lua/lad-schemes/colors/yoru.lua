@@ -4,6 +4,7 @@ M.colors = {
 	white = "#edeff0",
 	darker_black = "#060809",
 	black = "#0c0e0f", --  nvim bg
+	black2 = "#141617",
 	lighter_black = "#121415",
 	one_bg = "#161819",
 	one_bg2 = "#1f2122",
@@ -54,7 +55,7 @@ M.theme = {
 
 M.polish_hl = {
 	Pmenu = { bg = M.colors.darker_black },
-	PmenuSel = { bg = M.colors.one_bg2 },
+	PmenuSel = { fg = "none", bg = M.colors.one_bg2 },
 	-- GitSignsAdd = { fg = M.colors.pink },
 }
 
